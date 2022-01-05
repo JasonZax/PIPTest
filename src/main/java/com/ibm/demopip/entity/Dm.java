@@ -20,10 +20,14 @@ import java.io.Serializable;
 @Data //get和set
 @Table(appliesTo = "dm")
 public class Dm implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Integer id;
+
     private String code;
+
     private String name;
 
+    private String type;
 }

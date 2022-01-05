@@ -18,15 +18,19 @@ import java.io.Serializable;
 @Data //get和set
 @Table(appliesTo = "demo")
 public class Demo implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
-    private Integer id;
-    @Column
+
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+@Id
+    @Column(name = "id")
+    private String id;
+
+    @Column(name = "name")
     private String name;
-    @Column
+
+    @Column(name = "date")
     private String date;
-    @Column
+
+    @Column(name = "type")
     private String type;
 
 ////    @JsonIgnore
